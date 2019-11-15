@@ -1,0 +1,85 @@
+<div class="row">
+  <div class="col-sm-6 col-md-8 col-lg-9">
+    <h1>Over deze applicatie</h1>
+    <p>
+      Deze applicatie is gemaakt in het kader van het vak 'Clientside web frameworks' van Avans Hogeschool
+      Breda.
+    </p>
+    <h3>Project Cinema</h3>
+    <p>
+      Hier beschrijft je wat je project inhoudt. Beschrijf ook de entiteiten/domeinobjecten die je gebruikt,
+      en benoem per entiteit de attributen met hun datatype.
+    </p>
+  </div>
+  <div class="col-sm-6 col-md-4 col-lg-3">
+    <div class="card">
+      <div class="d-flex justify-content-center align-items-center">
+        <img
+          src="assets/images/gezicht.jpg"
+          class="card-img-top rounded-circle border profile-pic"
+          alt="..."
+        />
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Harm van Drimmelen</h5>
+        <p class="card-text">
+          Studentnummer: 2111197
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3>Entiteiten</h3>
+<div class="row">
+  <div class="col-sm-12 col-md-4">
+    <p>User</p>
+    <ul>
+      <li>name: string</li>
+      <li>id: number</li>
+      <li>birthdate: date</li>
+      <li>password: string</li>
+    </ul>
+  </div>
+  <div class="col-sm-12 col-md-4">
+    <p>Movie</p>
+    <ul>
+      <li>name: string</li>
+      <li>id: number</li>
+      <li>duration: number</li>
+      <li>discription: string</li>
+      <li>image: string</li>
+    </ul>
+  </div>
+  <div class="col-sm-12 col-md-4">
+    <p>Hall</p>
+    <ul>
+      <li>name: string</li>
+      <li>id: number</li>
+      <li>Seats: number</li>
+      <li>movie: movie.name</li>
+    </ul>
+  </div>
+  <div class="col-sm-12 col-md-4">
+    <p>Film show</p>
+    <ul>
+      <li>movie name: string</li>
+      <li>movie image: string</li>
+      <li>hall: string</li>
+      <li>id: number</li>
+      <li>Seats: number</li>
+      <li>time: datetime</li>
+    </ul>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <h3>Use Cases</h3>
+    <p>De applicatie biedt de volgende functionaliteit.</p>
+    <div *ngFor="let UC of useCases">
+      <app-usecase [useCase]="UC"></app-usecase>
+    </div>
+    <p>Vul hier zelf meer functionaliteit toe.</p>
+  </div>
+</div>
