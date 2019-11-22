@@ -26,51 +26,20 @@ import { Component, Input } from '@angular/core'
         <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbarsDefault">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" routerLink="/" [routerLinkActive]="['active']">Link</a>
+              <a
+                class="nav-link"
+                routerLink="movie"
+                [routerLinkActive]="['active']"
+                [routerLinkActiveOptions]="{ exact: true }"
+                >Movies</a>
             </li>
             <li class="nav-item">
               <a
-                class="nav-link disabled"
-                routerLink="/"
+                class="nav-link"
+                routerLink="movieShow"
                 [routerLinkActive]="['active']"
                 [routerLinkActiveOptions]="{ exact: true }"
-                tabindex="-1"
-                aria-disabled="true"
-                >Disabled</a
-              >
-            </li>
-            <li class="nav-item dropdown">
-              <div ngbDropdown class="d-inline-block">
-                <button class="btn btn-link" id="dropdownMenu1" ngbDropdownToggle>
-                  Actions
-                </button>
-                <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                  <button
-                    class="dropdown-item"
-                    routerLink="/"
-                    [routerLinkActive]="['active']"
-                    [routerLinkActiveOptions]="{ exact: true }"
-                  >
-                    Action - 1
-                  </button>
-                  <button
-                    class="dropdown-item"
-                    routerLink="/"
-                    [routerLinkActive]="['active']"
-                    [routerLinkActiveOptions]="{ exact: true }"
-                  >
-                    Another Action
-                  </button>
-                  <button
-                    class="dropdown-item"
-                    routerLink="/"
-                    [routerLinkActive]="['active']"
-                    [routerLinkActiveOptions]="{ exact: true }"
-                  >
-                    Something else is here
-                  </button>
-                </div>
-              </div>
+                >Movie Show</a>
             </li>
             <li class="nav-item">
               <a
@@ -78,8 +47,7 @@ import { Component, Input } from '@angular/core'
                 routerLink="about"
                 [routerLinkActive]="['active']"
                 [routerLinkActiveOptions]="{ exact: true }"
-                >About</a
-              >
+                >About</a>
             </li>
           </ul>
         </div>
